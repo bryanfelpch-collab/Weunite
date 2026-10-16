@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="actividades.css"
+<head>
+    <meta charset="UTF-8">
+    <title>WeUnite | Actividades</title>
+    <link rel="icon" href="logo.ico">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">
+            <img src="logoweunite.png">
+        </div>
+        <ul>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="vr.html">VR</a></li>
+            <li><a href="togo.html">To Go</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+        </nav>
+    </header>
+
+        <main>
+    <section class="espacios">
+    <h2>Actividades</h2>
+    <h3>Observa los espacios y actividades que tenemos para ti</h3>
+    <div class="galeria">
+        <div class="espacio">
+            <img src="espacio1.jpeg" alt="Espacio 1" onclick="abrirModal('espacio1.jpeg','En nuestro ESCAPE ROOM encontraras acertijos y pistas la meta es abrir la puerta y lograr salir ¿podras?')">
+            <h3 class="espaciounder">ESCAPE ROOM</>
+        </div>
+        <div class="espacio">
+            <img src="espacio2.jpeg" alt="Espacio 2" onclick="abrirModal('espacio2.jpeg','En nuestra Death Run encontraras diferentes obstaculos y espacios en los que tendras que saltar, deslizarte, columpiarte y demas para llegar al final')">
+        </div>
+        <div class="espacio">
+            <img src="espacio3.jpeg" alt="Espacio 3" onclick="abrirModal('espacio3.jpeg','En nuestro auditorio podras tener actividades de recreacion como clases de danza, aerobicos y presentaciones. Podras tener conferencias, charlas y encuentros con tu equipo')">
+        </div>
+        <div class="espacio">
+            <img src="espacio4.jpeg" alt="Espacio 4" onclick="abrirModal('espacio4.jpeg','En nuestra terraza encontraras actividades como Arco y Flecha, juegos de mesa e ingenio, rondas de meditacion entre otros')">
+        </div>
+        <div class="espacio">
+            <img src="espacio5.jpeg" alt="Espacio 5" onclick="abrirModal('espacio5.jpeg','En nuestra ART ROOM podras encontrar actividades de pintura y manualidades')">
+        </div>
+        <div class="espacio">
+            <img src="espacio6.jpeg" alt="Espacio 6" onclick="abrirModal('espacio6.jpeg','WeUnite puede ir hacia ti con nuestra tecnologia VR podras enfrentarte a diferentes simulaciones desde tu oficina podemos crear un espacion personalizado segun tu empresa')">
+            <h3 class="espaciounder">ESCAPE ROOM</>
+        </div>
+    </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img" src="" alt="Imagen espacio">
+        <div id="modal-desc"></div>
+    </div>
+</main>
+
+    <footer>
+        <nav>
+            <ul>
+            <li><a href="sobrenosotros.html">Quiénes Somos</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Misión</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Visión</a></li>
+            <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+            <li><a href="index.html">Volver al inicio</a></li>
+        </ul>
+        </nav>
+    </footer>
+
+    <script>
+    function abrirModal(imgSrc, descripcion) {
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('modal-img').src = imgSrc;
+        document.getElementById('modal-desc').innerText = descripcion;
+    }
+
+    function cerrarModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+    </script>
+</body>
+</html>

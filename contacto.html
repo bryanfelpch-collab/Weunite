@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="contacto.css"
+<head>
+    <meta charset="UTF-8">
+    <title>WeUnite | Contacto</title>
+    <link rel="icon" href="logo.ico">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">
+            <img src="logoweunite.png">
+        </div>
+        <ul>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="vr.html">VR</a></li>
+            <li><a href="togo.html">To Go</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+  <section class="contacto">
+    <!-- Título y descripción -->
+    <h2>Contáctanos</h2>
+    <p>
+      Déjanos tus datos y solicita una cotización rápida. Nos pondremos en contacto contigo lo antes posible.
+    </p>
+
+    <!-- Formulario -->
+    <form onsubmit="enviarCotizacion(event)">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="telefono">Número de Teléfono:</label><br>
+      <input type="tel" id="telefono" name="telefono" required><br><br>
+
+      <button type="submit">Cotización</button>
+    </form>
+  </section>
+</main>
+
+    <footer>
+        <nav>
+            <ul>
+            <li><a href="sobrenosotros.html">Quiénes Somos</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Misión</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Visión</a></li>
+            <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+            <li><a href="index.html">Cargar nuevamente el inicio</a></li>
+        </ul>
+        </nav>
+    </footer>
+    <script>
+  function enviarCotizacion(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+
+    // Texto que se enviará
+    const texto = `Hola, soy ${nombre}. Mi número es ${telefono}. Quiero una cotización.`;
+
+    // Aquí reemplazas el link con el que quieras redirigir
+    const url = `https://w.app/weunite?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="eventos.css"
+<head>
+    <meta charset="UTF-8">
+    <title>WeUnite | Eventos</title>
+    <link rel="icon" href="logo.ico">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">
+            <img src="logoweunite.png">
+        </div>
+        <ul>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="vr.html">VR</a></li>
+            <li><a href="togo.html">To Go</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+        </nav>
+    </header>
+
+        <main>
+    <section class="eventos">
+    <h2>Eventos</h2>
+    <h3>Descubre la experiencia de nuestros colaboradores</h3>
+    <div class="galeria">
+        <div class="evento">
+            <img src="evento1.jpeg" alt="Evento 1" onclick="abrirModal('evento1.jpeg','Nuestro ultimo evento de integracion con LATAM incluyo actividades como ESCAPEROOM y juegos de acertijos')">
+        </div>
+        <div class="evento">
+            <img src="evento2.jpeg" alt="Evento 2" onclick="abrirModal('evento2.jpeg','El equipo de Despegar se enfrento a nuestra habitacion de obstaculos flotantes')">
+        </div>
+        <div class="evento">
+            <img src="evento3.jpeg" alt="Evento 3" onclick="abrirModal('evento3.jpeg','Llevamos nuestra tecnologia de integracion VR a las oficinas de American Airlines donde interactuaron con diferentes retos y actividades de realidad virtual')">
+        </div>
+        <div class="evento">
+            <img src="evento4.jpeg" alt="Evento 4" onclick="abrirModal('evento4.jpeg','Tuvimos actividades de Aerobicos y Danza con el equipo de Viajes Falabella en nuestas instalaciones')">
+        </div>
+        <div class="evento">
+            <img src="evento5.jpeg" alt="Evento 5" onclick="abrirModal('evento5.jpeg','La tripulacion de Avianca se enfrento a diferentes competencias entre ellas un divertido reto de Arco y Flecha en nuestras instalaciones')">
+        </div>
+    </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img" src="" alt="Imagen evento">
+        <div id="modal-desc"></div>
+    </div>
+</main>
+
+    <footer>
+        <nav>
+            <ul>
+            <li><a href="sobrenosotros.html">Quiénes Somos</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Misión</a></li>
+            <li><a href="sobrenosotros.html">Nuestra Visión</a></li>
+            <li><a href="trabaja.html">Trabaja con Nosotros</a></li>
+            <li><a href="index.html">Volver al inicio</a></li>
+        </ul>
+        </nav>
+    </footer>
+
+    <script>
+    function abrirModal(imgSrc, descripcion) {
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('modal-img').src = imgSrc;
+        document.getElementById('modal-desc').innerText = descripcion;
+    }
+
+    function cerrarModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+    </script>
+</body>
+</html>
